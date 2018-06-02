@@ -1,0 +1,130 @@
+/*                                                           */
+
+/*                  Etilos generales                */
+
+/*                                                           */
+
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --backgroundOfHead: #dfe4ea;
+    --headOpacity: .8;
+    --fontColor: #5352ed;
+    --box-shadow: 0 0px 8px 0 #353b48;
+    background: url(./img/index-background2.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+/*                                                                       */
+
+/*              estilos de la parte superior              */
+
+/*                                                                      */
+
+.navigation {
+    margin-top: 4%;
+}
+
+.navigation h1 {
+    background: var(--backgroundOfHead);
+    text-align: center;
+    line-height: 2.5rem;
+    font-weight: normal;
+    color: var(--fontColor);
+    opacity: var(--headOpacity);
+
+}
+
+.nav-container {
+    background: var(--backgroundOfHead);
+    display: table;
+    margin: 0 auto;
+    opacity: var(--headOpacity);
+}
+
+.nav-container li {
+    display: inline-block;
+    margin: 0 1rem;
+    line-height: 25px;
+}
+
+.nav-container a {
+    text-decoration: none;
+    padding-left: 20px;
+    background-size: 15px;
+    color: var(--fontColor);
+    font-size: 1.15em;
+}
+
+.font {
+    background: url('/img-icon/Decrease-Font-256.png') no-repeat left;
+}
+
+.color {
+    background: url('/img-icon/Bg-Color-256.png') no-repeat left;
+}
+
+.meta {
+    background: url('/img-icon/Database-256.png') no-repeat left;
+}
+
+.visual {
+    background: url('/img-icon/Clapperboard-256.png') no-repeat left;
+}
+
+.other {
+    background: url('/img-icon/Categorize-256.png') no-repeat left;
+}
+
+.nav-container a:hover {
+    color: #3742fa;
+    text-decoration: underline;
+    transition: 1s;
+}
+
+
+/* parte central */
+
+.center-container {
+    width: 70%;
+    margin: 3% auto;
+}
+
+.center-container div{
+    margin: 0 auto;
+    padding: 0.1px;
+    display:flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.center-container span {
+    margin: 10px; 
+    display: inline-block;
+}
+
+.center-container img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.center-container a {
+    background: var(--backgroundOfHead);
+    display: inline-table;
+    padding: 3px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    color: var(--fontColor);
+    text-decoration: none;
+    font-weight: 500;
+}
