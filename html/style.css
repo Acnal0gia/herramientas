@@ -1,0 +1,61 @@
+body{background:#252831;}
+div#main{
+    width:940px;
+}
+table{
+    /*styles*/
+    border:1px solid #424858;
+    background:#424858;
+    font-family: 'Supermercado One', cursive;
+    font-size:18px;
+    text-align:Center;
+    /*Sizes*/
+    margin:100px auto 0px;
+}
+thead>tr>th{
+    background:#1ba8de;
+    color:black;
+}
+th{
+    border:1px solid #1ba8de;
+    background:#424858;
+    padding:10px;
+    color:whitesmoke;
+}
+/*Clases extras*/
+.cst{background:#252831;
+    color:#151515;
+}
+.G:hover{color:#1bc98e;}
+.R:hover{color:#e6475b;}
+.P:hover{color:#9f85ff;}
+.Y:hover{color:#e1d938;}
+/*Clases u*/
+.c1:hover{background:#1bc98e;}
+.c2:hover{background:#e6475b;}
+.c3:hover{background:#9f85ff;}
+.c4:hover{background:#e1d938;}
+/*modificacion del domingo XD*/
+
+/*contador de dias */
+div.cont{
+    margin:20px 0px;
+}
+div.cont h2{
+    text-align:center;
+    font-size:80px;
+    font-family: 'Nanum Brush Script', cursive;
+}
+#script{
+    color:rgb(185, 0, 0);
+}
+/*mensaje*/
+div.msm{
+    position:absolute;
+    color:whitesmoke;
+    font-family: 'Supermercado One', cursive;
+    width:130px;
+    top:50px;
+    margin-left:130px;
+    transform: rotate( -10deg );
+}
