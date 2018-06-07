@@ -1,41 +1,53 @@
-body{background:#252831;}
-div#main{
-    width:940px;
+*,
+::after,
+::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-table{
-    /*styles*/
+
+body{
+    background: #252831;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/*                    */
+/* estilos centrales  */
+/*                    */
+
+.main{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.grid,
+.main h1{
+    text-align: center;
+    margin-bottom: 2%;
+    padding: 0.1px;
     border:1px solid #424858;
     background:#424858;
-    font-family: 'Supermercado One', cursive;
-    font-size:18px;
-    text-align:Center;
-    /*Sizes*/
-    margin:100px auto 0px;
 }
-thead>tr>th{
+.grid th{
+    display: inline-block;
+    line-height: 2.5rem;
+    width: 10%;
+    border:1px solid #1ba8de;
+    background:#424858;
+    color:whitesmoke;
+
+}
+.grid-thead th{ 
     background:#1ba8de;
     color:black;
 }
-th{
-    border:1px solid #1ba8de;
-    background:#424858;
-    padding:10px;
-    color:whitesmoke;
+.grid-tbody tr:nth-child(3) th{
+
+    width: 60%;
 }
-/*Clases extras*/
-.cst{background:#252831;
-    color:#151515;
-}
-.G:hover{color:#1bc98e;}
-.R:hover{color:#e6475b;}
-.P:hover{color:#9f85ff;}
-.Y:hover{color:#e1d938;}
-/*Clases u*/
-.c1:hover{background:#1bc98e;}
-.c2:hover{background:#e6475b;}
-.c3:hover{background:#9f85ff;}
-.c4:hover{background:#e1d938;}
-/*modificacion del domingo XD*/
 
 /*contador de dias */
 div.cont{
