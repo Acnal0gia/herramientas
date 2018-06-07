@@ -6,14 +6,13 @@
     <title>Horario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
     <script src="script.js"></script>
 </head>
 <body>
     <div class="main">
-        <table>
-            <thead>
+        <h1>Horario de clases diarias</h1>
+        <table class="grid" >
+            <thead class="grid-thead">
                 <tr>
                     <th>Lunes</th>
                     <th>Martes</th>
@@ -23,50 +22,40 @@
                     <th>Sabado</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="grid-tbody">
                 <tr>
-                    <th>-----</th>
-                    <th>-----</th>
-                    <th>Ortografia</th>
-                    <th>Ingles</th>
-                    <th>-----</th>
-                    <th>-----</th>
+                    <th >Css</th>
+                    <th >C</th>
+                    <th >Sql</th> 
+                    <th >JavaScript</th>
+                    <th >Html</th>
+                    <th >Git,Github</th>
                 </tr>
                 <tr>
-                    <th class="c2">Css</th>
-                    <th class="c3">C</th>
-                    <th class="c4">Sql</th> 
-                    <th class="c1">JavaScript</th>
-                    <th class="c2">Html</th>
-                    <th class="cst P">Git,Github</th>
+                    <th >Git,Github</th>
+                    <th >Matematica</th>
+                    <th >Css</th>
+                    <th >C</th>
+                    <th >Sql</th>
+                    <th >javaScript</th>
                 </tr>
                 <tr>
-                    <th class="c1">Git,Github</th>
-                    <th class="c2">Matematica</th>
-                    <th class="c3">Css</th>
-                    <th class="c4">C</th>
-                    <th class="c1">Sql</th>
-                    <th class="cst R">javaScript</th>
+                    <th colspan="6">Ortografia y ingles</th>
                 </tr>
                 <tr>
-                    <th class="cst Y">JavaScript</th>
-                    <th class="cst G">Html</th>
-                    <th class="c2">Git,Github</th>
-                    <th class="cst P">Matematica</th>
-                    <th class="c4">Css</th>
-                    <th class="cst G">C</th>
+                    <th >JavaScript</th>
+                    <th >Html</th>
+                    <th >Git,Github</th>
+                    <th >Matematica</th>
+                    <th >Css</th>
+                    <th >C</th>
                 </tr>
             </tbody>
         </table>
     <!--Contador de dias-->
         <div class='cont'>
             <h2>Dia <span id='script'> <script>document.write(contador)</script></span> de   300</h2>
-        </div>
-<!--Mensaje-->
-        <div class="msm">
-            <h2>Las clases de la universidad se priorisan</h2>
-        </div>
-    
+        </div>    
     </div>
 </body>
 </html>
