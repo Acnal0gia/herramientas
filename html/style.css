@@ -1,3 +1,7 @@
+/*                   */
+/* Estilos Generales */
+/*                   */
+
 *,
 ::after,
 ::before{
@@ -7,67 +11,90 @@
 }
 
 body{
-    background: #252831;
+    --text-shadow: 1px 1px 1px black;
+    --font-family-title: 'Share Tech', sans-serif;
+    --font-family:'Lato', sans-serif;;
+    --font-size-title: 2.5em;
+    --margin-bottom: 5%;
+
+    --one-color: rgb(51, 30, 154);
+    --two-color: rgb(24, 72, 147);
+
+    background: url(/img/background.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
+body li{list-style: none;}
 
 /*                    */
 /* estilos centrales  */
 /*                    */
-
-.main{
-    width: 80%;
+.main,
+.grid{
     display: flex;
     flex-direction: column;
 }
-.grid,
-.main h1{
+.head-grid,
+.row{display: flex;}
+.main{width: 80%;}
+.grid{
+    margin-bottom: var(--margin-bottom);
+    box-shadow: 0px 0px 0px 1px var(--two-color);
+}
+
+.main h1,
+.cont{
+    color: var(--two-color);
     text-align: center;
-    margin-bottom: 2%;
+    text-shadow: var(--text-shadow);
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-title);
+}
+.head-grid li,
+.body-grid li{
+    width:100%;
+    border: 1px solid var(--two-color);
+    text-align: center;
+    line-height: 4rem;
+    font-family: var(--font-family);
+}
+.main h1{
     padding: 0.1px;
-    border:1px solid #424858;
-    background:#424858;
+    margin-bottom: var(--margin-bottom);
 }
-.grid th{
-    display: inline-block;
-    line-height: 2.5rem;
-    width: 10%;
-    border:1px solid #1ba8de;
-    background:#424858;
-    color:whitesmoke;
+.head-grid li{
+    color:white;
+    background: var(--two-color);
+}
+.three li{width: 100%;}
 
-}
-.grid-thead th{ 
-    background:#1ba8de;
-    color:black;
-}
-.grid-tbody tr:nth-child(3) th{
 
-    width: 60%;
-}
-
-/*contador de dias */
-div.cont{
-    margin:20px 0px;
-}
-div.cont h2{
-    text-align:center;
-    font-size:80px;
-    font-family: 'Nanum Brush Script', cursive;
-}
-#script{
-    color:rgb(185, 0, 0);
-}
-/*mensaje*/
-div.msm{
-    position:absolute;
-    color:whitesmoke;
-    font-family: 'Supermercado One', cursive;
-    width:130px;
-    top:50px;
-    margin-left:130px;
-    transform: rotate( -10deg );
+@media(max-width:700px){
+    .main{
+        width: 100%;
+    }
+    .grid{
+        flex-direction: row;
+        justify-content: center;
+        box-shadow: none;
+    }
+    .head-grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .body-grid{
+        display: flex;
+        flex-direction: row;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .three{
+        display: none;
+    }
 }
