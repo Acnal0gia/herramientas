@@ -3,59 +3,62 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Horario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Horario</title>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:700|Share+Tech" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="main">
-        <h1>Horario de clases diarias</h1>
-        <table class="grid" >
-            <thead class="grid-thead">
-                <tr>
-                    <th>Lunes</th>
-                    <th>Martes</th>
-                    <th>Miercoles</th>
-                    <th>Jueves</th>
-                    <th>Viernes</th>
-                    <th>Sabado</th>
-                </tr>
-            </thead>
-            <tbody class="grid-tbody">
-                <tr>
-                    <th >Css</th>
-                    <th >C</th>
-                    <th >Sql</th> 
-                    <th >JavaScript</th>
-                    <th >Html</th>
-                    <th >Git,Github</th>
-                </tr>
-                <tr>
-                    <th >Git,Github</th>
-                    <th >Matematica</th>
-                    <th >Css</th>
-                    <th >C</th>
-                    <th >Sql</th>
-                    <th >javaScript</th>
-                </tr>
-                <tr>
-                    <th colspan="6">Ortografia y ingles</th>
-                </tr>
-                <tr>
-                    <th >JavaScript</th>
-                    <th >Html</th>
-                    <th >Git,Github</th>
-                    <th >Matematica</th>
-                    <th >Css</th>
-                    <th >C</th>
-                </tr>
-            </tbody>
-        </table>
+      
+        <h1><a href="../index.html"><i class="fa fa-arrow-circle-left"></i></a>   Horario de clases diarias</h1>
+        <div class="grid">
+            <ul class="head-grid">
+                <li>Lunes</li>
+                <li>Martes</li>
+                <li>Miercoles</li>
+                <li>Jueves</li>
+                <li>Viernes</li>
+                <li>Sabado</li>
+            </ul>
+            <div class="body-grid">
+                <ul class="row one">
+                    <li >Css</li>
+                    <li >C</li>
+                    <li >Sql</li> 
+                    <li >JavaScript</li>
+                    <li >Html</li>
+                    <li >Git,Github</li>
+                </ul>
+
+                <ul class="row two">
+                    <li >Git,Github</li>
+                    <li >Matematica</li>
+                    <li >Css</li>
+                    <li >C</li>
+                    <li >Sql</li>
+                    <li >javaScript</li>
+                </ul>
+
+                <ul class="row three">
+                    <li>Ortografia y ingles</li>         
+                </ul>
+
+                <ul class="row four">
+                    <li >JavaScript</li>
+                    <li >Html</li>
+                    <li >Git,Github</li>
+                    <li >Matematica</li>
+                    <li >Css</li>
+                    <li >C</li>
+                </ul>
+            </div>
+        </div>
+        
     <!--Contador de dias-->
-        <div class='cont'>
-            <h2>Dia <span id='script'> <script>document.write(contador)</script></span> de   300</h2>
-        </div>    
+        <div id="cont"></div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
