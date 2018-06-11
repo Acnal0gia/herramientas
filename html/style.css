@@ -44,7 +44,7 @@ body li{list-style: none;}
     margin-bottom: var(--margin-bottom);
     box-shadow: 0px 0px 0px 1px var(--two-color);
 }
-
+.main a{color: var(--two-color);}
 .main h1,
 .cont{
     color: var(--two-color);
