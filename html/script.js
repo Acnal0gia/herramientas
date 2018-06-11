@@ -1,25 +1,23 @@
-//Hoy es el dia 0 de 300
+(function(){
+    let hoy=new Date();
+    let dia=hoy.getDate();
+    let mes=hoy.getMonth();
+    let contador=dia;
 
-var hoy=new Date();
-var dia=hoy.getDate();
-var mes=hoy.getMonth();
+    let cont = document.getElementById(`cont`);
 
-//se asigna los dias del mes en curso
-var contador=dia;
-
-for(var i=0;i<mes;i++){
-
-    if((i%2)==0){//   par => enero, marzo, mayo, julio, septiembre, noviembre
-        contador+=31;
-    }else{//impar => abril, junio, agosto, octubre, diciembre
-        if (i===1) {//febrero
-            contador += 28;
-        }else{//
-            contador += 30;
+    for(let i=0;i<mes;i++){
+        if((i%2)==0){//   par => enero, marzo, mayo, julio, septiembre, noviembre
+            contador+=31;
+        }else{//impar => abril, junio, agosto, octubre, diciembre
+            if (i===1) {//febrero
+                contador += 28;
+            }else{//
+                contador += 30;
+            }
         }
     }
-}
+    contador-=63;
+    cont.innerHTML = `<h2 class='cont'>Dia ${contador} de 300</h2>`; 
+}())
 
-//Resta de los dias transcurridos
-contador-=63;
-console.log(contador);
