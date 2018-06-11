@@ -20,7 +20,7 @@ body{
     --one-color: rgb(51, 30, 154);
     --two-color: rgb(24, 72, 147);
 
-    background: url(/img/background.jpg) no-repeat center center fixed;
+    background: url(img/background.jpg) no-repeat center center fixed;
     background-size: 100% 100%;
     display: flex;
     justify-content: center;
