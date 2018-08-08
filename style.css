@@ -1,128 +1,192 @@
-/*                                                           */
-/*                  Etilos generales                         */
-/*                                                           */
-
 *,
-::after,
-::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-    --backgroundOfHead: #dfe4ea;
-    --headOpacity: .8;
-    --fontColor: #5352ed;
-    --box-shadow: 0 0px 8px 0 #353b48;
-    background: url(./img/index-background2.jpg) no-repeat center center;
-    background-size: 100% 100%;
-    background-attachment: fixed;
+  min-height: 100vh;
 }
 
-/*                                                                       */
-
-/*              estilos de la parte superior              */
-
-/*                                                                      */
-
-.navigation {
-    margin-top: 4%;
+.container {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (15% 1fr)[1];
+      grid-template-columns: repeat(1, 15% 1fr);
+  -ms-grid-rows: (14.3vh 1fr)[1];
+      grid-template-rows: repeat(1, 14.3vh 1fr);
 }
 
-.navigation h1 {
-    background: var(--backgroundOfHead);
-    text-align: center;
-    line-height: 2.5rem;
-    font-weight: normal;
-    color: var(--fontColor);
-    opacity: var(--headOpacity);
+.container .head {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
 
+.container .navegation {
+  grid-row: 1 / -1;
+}
+
+.head header {
+  width: 85%;
+  height: 14.3vh;
+  background: #c1c0b9;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #3f3b3b;
+  position: fixed;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.head h1 {
+  color: #3f3b3b;
+  font-family: "Poor Story", cursive;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .head h1 {
+    font-size: 1.7rem;
+  }
 }
 
 .nav-container {
-    background: var(--backgroundOfHead);
-    display: table;
-    margin: 0 auto;
-    opacity: var(--headOpacity);
+  height: 100%;
+  width: 15%;
+  -webkit-box-shadow: 1px 0 4px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 0 4px 0 rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .nav-container li {
-    display: inline-block;
-    margin: 0 1rem;
-    line-height: 25px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
 }
 
 .nav-container a {
-    text-decoration: none;
-    padding-left: 20px;
-    background-size: 15px;
-    color: var(--fontColor);
-    font-size: 1.15em;
-}
-
-.font {
-    background: url('/img-icon/Decrease-Font-256.png') no-repeat left;
-}
-
-.color {
-    background: url('/img-icon/Bg-Color-256.png') no-repeat left;
-}
-
-.meta {
-    background: url('/img-icon/Database-256.png') no-repeat left;
-}
-
-.visual {
-    background: url('/img-icon/Clapperboard-256.png') no-repeat left;
-}
-
-.other {
-    background: url('/img-icon/Categorize-256.png') no-repeat left;
+  background: #e7e6e1;
+  border-bottom: 1px solid #537791;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #3f3b3b;
+  font-size: 20px;
+  font-family: "Poor Story", cursive;
+  font-weight: 700;
 }
 
 .nav-container a:hover {
-    color: #3742fa;
-    text-decoration: underline;
-    transition: 1s;
+  background: #537791;
 }
 
-
-/* parte central */
-
-.center-container {
-    width: 70%;
-    margin: 3% auto;
+@media (max-width: 600px) {
+  .nav-container a {
+    font-size: 0;
+  }
+  .nav-container a:hover {
+    background: #e7e6e1;
+  }
+  .nav-container a:hover .svg .path {
+    fill: #537791;
+  }
 }
 
-.center-container div{
-    margin: 0 auto;
-    padding: 0.1px;
-    display:flex; 
-    justify-content: center;
-    flex-wrap: wrap;
+.nav-container .svg {
+  display: inline-block;
+  width: 20px;
+  margin: 0 0 0 5px;
 }
 
-.center-container span {
-    margin: 10px; 
-    display: inline-block;
+@media (max-width: 600px) {
+  .nav-container .svg {
+    width: 40px;
+  }
 }
 
-.center-container img {
-    display: block;
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
+.nav-container .path {
+  fill: #3f3b3b;
 }
 
-.center-container a {
-    background: var(--backgroundOfHead);
-    display: inline-table;
-    padding: 3px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: var(--box-shadow);
-    color: var(--fontColor);
-    text-decoration: none;
-    font-weight: 500;
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
+
+.main a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
+}
+
+.main a:hover {
+  color: white;
+}
+
+.main span {
+  background: rebeccapurple;
+  height: 200px;
+}
+
+.main span:nth-child(1) {
+  background: #3c40c6;
+}
+
+.main span:nth-child(2) {
+  background: #c7c7c7;
+}
+
+.main span:nth-child(6) {
+  background: #c73c3c;
+}
+
+.main span:nth-child(7) {
+  background: #3c88c7;
+}
+/*# sourceMappingURL=style.css.map */
